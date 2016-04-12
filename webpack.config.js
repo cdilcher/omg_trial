@@ -29,7 +29,20 @@ module.exports = {
     devtool: 'inline-source-map',
     hot: true
   },
+  
+  debug: true,
+  
+  devtool: 'cheap-module-eval-source-map',
+
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
+    new webpack.DefinePlugin({
+      __DEVELOPMENT__: true,
+      'process.env': {
+        NODE_ENV: JSON.stringify('development'),
+      },
+    }),
   ]
 };

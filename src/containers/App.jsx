@@ -2,27 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 
-var Root = React.createClass({
+var App = React.createClass({
   
-  propTypes: {
-    
-  },
-
-  childContextTypes: {
-    
-  },
-
-  handleScroll: function() {
-    
-  },
-
-  getChildContext: function() {
-    
-  },
-
-  showNotice: function() {
-    
-  },
+  propTypes: {},
 
   render: function() {
     return(
@@ -30,7 +12,6 @@ var Root = React.createClass({
         <h1>Ok Go!</h1>
       </div>
     )
-  
   },
 })
 
@@ -39,4 +20,4 @@ function mapStateToProps(storeState) {
 }
 
 export default connect(
-  mapStateToProps)(Root);
+  mapStateToProps)(App);

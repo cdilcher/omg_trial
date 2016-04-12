@@ -1,4 +1,4 @@
-import Immutable from 'immutable'
+// import Immutable from 'immutable'
 import { combineReducers } from 'redux-immutablejs'
 
 var rootReducer = combineReducers({
